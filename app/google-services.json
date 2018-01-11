@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "462610600664",
+    "firebase_url": "https://chattalk-ed392.firebaseio.com",
+    "project_id": "chattalk-ed392",
+    "storage_bucket": "chattalk-ed392.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462610600664:android:19600d4b6760cd18",
+        "android_client_info": {
+          "package_name": "com.example.ali.chattalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462610600664-04isl5eap09jdarqd45qu2qkgc8jd270.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ali.chattalk",
+            "certificate_hash": "db80b0a889750e586ed935895d2e05c0808bc849"
+          }
+        },
+        {
+          "client_id": "462610600664-ol0ib6tehkkn1jbn14d07j5b2vm78ts2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ZNwWQgIFuV2h4RVTzD26n2WtH_VIH7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462610600664-ol0ib6tehkkn1jbn14d07j5b2vm78ts2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
