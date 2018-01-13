@@ -25,6 +25,22 @@
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextName"
+            android:hint="Adınız ve Soyadınız" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAdress"
+            android:hint="Adres giriniz"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSave"
+            android:text="Bilgileri Kaydet"/>
+
         <Button
             android:id="@+id/buttonLogout"
             android:layout_width="match_parent"

@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this,"Lütfen şifre girin.",Toast.LENGTH_SHORT).show();
             return;
         }
-        progressDialog.setMessage("Kaydediliyor...");
+        progressDialog.setMessage("Giriş yapılıyor...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
