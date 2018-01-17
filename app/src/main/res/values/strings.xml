@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Chat&amp;Talk</string>
+    <string name="title_activity_secim">SecimActivity</string>
 </resources>

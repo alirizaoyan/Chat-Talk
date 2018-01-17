@@ -1,8 +1,10 @@
 package com.example.ali.chattalk;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +32,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firebaseAuth= FirebaseAuth.getInstance();
 
@@ -78,5 +82,23 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         if(view==buttonSave){
             saveUserInformation();
         }
+    }
+    @Override
+    public boolean  onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent backMainTest = new Intent(this,SecimActivity.class);
+        startActivity(backMainTest);
+        finish();
     }
 }

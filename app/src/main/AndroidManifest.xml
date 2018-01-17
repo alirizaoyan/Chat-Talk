@@ -3,6 +3,12 @@
     package="com.example.ali.chattalk">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera2" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +25,28 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ali.chattalk.SecimActivity" />
+        </activity>
+        <activity android:name=".CameraActivity"
+            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ali.chattalk.SecimActivity" />
+        </activity>
+        <activity android:name=".PhotoActivity"
+            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ali.chattalk.SecimActivity" />
+        </activity>
+        <activity
+            android:name=".SecimActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

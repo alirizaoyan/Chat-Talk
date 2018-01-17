@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()){
                     //kullanıcı kaydı başarılı.
                     finish();
-                    startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(),PhotoActivity.class));
                 }else {
                     Toast.makeText(MainActivity.this,"Kayıt başarısız",Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
