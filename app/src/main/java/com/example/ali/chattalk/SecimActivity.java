@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.telecom.InCallService;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -46,6 +47,10 @@ public class SecimActivity extends AppCompatActivity {
         if (id== R.id.action_profile){
             finish();
             startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+        }
+        if(id==R.id.action_video_call){
+            finish();
+            startActivity(new Intent(getApplicationContext(), VideoCallActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

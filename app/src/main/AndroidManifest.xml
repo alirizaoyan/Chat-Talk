@@ -27,19 +27,21 @@
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".ProfileActivity"
-            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+            android:parentActivityName=".SecimActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ali.chattalk.SecimActivity" />
         </activity>
-        <activity android:name=".CameraActivity"
-            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+        <activity
+            android:name=".CameraActivity"
+            android:parentActivityName=".SecimActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ali.chattalk.SecimActivity" />
         </activity>
-        <activity android:name=".PhotoActivity"
-            android:parentActivityName="com.example.ali.chattalk.SecimActivity" >
+        <activity
+            android:name=".PhotoActivity"
+            android:parentActivityName=".SecimActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ali.chattalk.SecimActivity" />
@@ -47,6 +49,12 @@
         <activity
             android:name=".SecimActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".VideoCallActivity"
+            android:parentActivityName=".SecimActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ali.chattalk.SecimActivity" />
+        </activity>
     </application>
 
 </manifest>
