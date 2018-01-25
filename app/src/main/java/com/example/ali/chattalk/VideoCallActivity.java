@@ -3,9 +3,11 @@ package com.example.ali.chattalk;
 import android.Manifest;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import com.opentok.android.OpentokError;
@@ -34,6 +36,9 @@ public class VideoCallActivity extends AppCompatActivity implements Session.Sess
     private Publisher publisher;
     private Subscriber subscriber;
 
+    private FloatingActionButton switchCamera,micControl,videoControl;
+    private boolean micDurum=true, videoDurum=true ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +49,51 @@ public class VideoCallActivity extends AppCompatActivity implements Session.Sess
 
         PublisherContainer = (FrameLayout) findViewById(R.id.publisher_container);
         SubscriberContainer = (FrameLayout) findViewById(R.id.subscriber_container);
+
+        videoControl= (FloatingActionButton) findViewById(R.id.local_video_action_fab);
+        micControl =(FloatingActionButton) findViewById(R.id.mute_action_fab);
+        switchCamera =(FloatingActionButton) findViewById(R.id.switchCameraa);
+
+
+        switchCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                publisher.cycleCamera();
+            }
+        });
+
+        micControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(micDurum==true){
+
+                    publisher.setPublishAudio(false);
+                    micControl.setImageResource(R.drawable.ic_mic_close_24dp);
+                    micDurum=false;
+                }
+                else {
+                    publisher.setPublishAudio(true);
+                    micControl.setImageResource(R.drawable.ic_mic_white_24dp);
+                    micDurum=true;
+                }
+            }
+        });
+
+        videoControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(videoDurum==true){
+                    publisher.setPublishVideo(false);
+                    videoControl.setImageResource(R.drawable.ic_videocam_off_24dp);
+                    videoDurum=false;
+                }
+                else {
+                    publisher.setPublishVideo(true);
+                    videoControl.setImageResource(R.drawable.ic_videocam_white_24dp);
+                    videoDurum=true;
+                }
+            }
+        });
 
     }
 
